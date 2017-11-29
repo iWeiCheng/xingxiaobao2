@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_color_white_disable">#CCCCCC</color>
+    <color name="btn_color_white_normal">#FFFFFF</color>
+    <color name="btn_color_white_pressed">#e5e5e5</color>
+    <declare-styleable name="XKeyboardView"><attr format="reference" name="deleteDrawable"/><attr format="color|reference" name="deleteColor"/><attr format="reference" name="deleteBackground"/></declare-styleable>
+    <declare-styleable name="gridPasswordView"><attr format="color|reference" name="textcolor"/><attr format="dimension" name="textsize"/><attr format="color" name="borderColor"/><attr format="color" name="borderActiveColor"/><attr format="color" name="gridColor"/><attr format="dimension" name="lineWidth"/><attr format="integer" name="passwordLength"/><attr format="boolean" name="toUpper"/><attr format="string" name="passwordTransformation"/><attr format="enum" name="passwordType">
+            <enum name="numberPassword" value="0"/>
+            <enum name="textPassword" value="1"/>
+            <enum name="textVisiblePassword" value="2"/>
+            <enum name="textWebPassword" value="3"/>
+        </attr></declare-styleable>
+    <string name="app_name">XKeyBoardView</string>
+    <style name="GridPasswordView"/>
+    <style name="GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+    <style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+    <style name="GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>

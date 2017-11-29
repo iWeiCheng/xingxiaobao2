@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\qwerty.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\qwerty.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\keyboard_number.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\keyboard_number.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\qwerty.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\qwerty.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provice.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\provice.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\qwerty_without_chinese.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\qwerty_without_chinese.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provice.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\provice.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\english.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\english.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\english.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\english.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\qwerty_without_chinese.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\qwerty_without_chinese.xml"
+    },
+    {
+        "merged": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\keyboard_number.xml",
+        "source": "F:\\companyCode\\xingxiaobao2\\xingxiaobao\\gridpassword\\build\\intermediates\\bundles\\debug\\res\\xml\\keyboard_number.xml"
+    }
+]
