@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.caijia.widget.looperrecyclerview.LooperPageRecyclerView;
 import com.caijia.widget.looperrecyclerview.RecyclerViewCircleIndicator;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -112,8 +113,6 @@ public class HomepageFragment extends BaseFragment {
     RelativeLayout rlProduct5;
     @BindView(R.id.recycler_guess)
     RecyclerView recyclerGuess;
-    @BindView(R.id.view_keyboard)
-    XKeyboardView viewKeyboard;
     @BindView(R.id.ll_car_number)
     LinearLayout ll_car_number;
 
@@ -202,7 +201,10 @@ public class HomepageFragment extends BaseFragment {
                 case 0:
                     tvProduct1.setText(bean.getTitle());
                     tvProduct1Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(bean.getImgUrl()).into(ivProduct1);
+                    Glide.with(getContext())
+                            .load(Network.SERVICE+bean.getImgUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.lei01).error(R.drawable.lei01))
+                    .into(ivProduct1);
                     rlProduct1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -215,7 +217,9 @@ public class HomepageFragment extends BaseFragment {
                 case 1:
                     tvProduct2.setText(bean.getTitle());
                     tvProduct2Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(bean.getImgUrl()).into(ivProduct2);
+                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.lei02).error(R.drawable.lei02))
+                            .into(ivProduct2);
                     rlProduct2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -228,7 +232,10 @@ public class HomepageFragment extends BaseFragment {
                 case 2:
                     tvProduct3.setText(bean.getTitle());
                     tvProduct3Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(bean.getImgUrl()).into(ivProduct3);
+                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.lei03).error(R.drawable.lei03))
+
+                            .into(ivProduct3);
                     rlProduct3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -241,7 +248,9 @@ public class HomepageFragment extends BaseFragment {
                 case 3:
                     tvProduct4.setText(bean.getTitle());
                     tvProduct4Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(bean.getImgUrl()).into(ivProduct4);
+                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.lei04).error(R.drawable.lei04))
+                            .into(ivProduct4);
                     rlProduct4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -254,7 +263,9 @@ public class HomepageFragment extends BaseFragment {
                 case 4:
                     tvProduct5.setText(bean.getTitle());
                     tvProduct5Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(bean.getImgUrl()).into(ivProduct5);
+                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.lei05).error(R.drawable.lei05))
+                            .into(ivProduct5);
                     rlProduct5.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

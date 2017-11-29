@@ -42,7 +42,10 @@ public class MemberAdapter extends BaseQuickAdapter<PrivilegeBean.GradeListBean.
         ImageView imageView = helper.getView(R.id.item_img);
         Glide.with(mContext)
                 .load(Network.SERVICE + item.getIco())
-//                .apply(myOptions)
+                .apply(new RequestOptions()
+                        .fitCenter()
+                        .error(R.drawable.ft_icon02)
+                        .placeholder(R.drawable.ft_icon02))
                 .into(imageView);
         View root = helper.getView(R.id.root);
         root.setOnClickListener(new View.OnClickListener() {

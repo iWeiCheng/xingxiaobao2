@@ -1,6 +1,8 @@
 package com.jiajun.demo.moudle.me;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -187,8 +189,9 @@ public class PersonalInfoActivity extends BaseActivity {
             map.put("signature", "A8B967C75C5C853C35D140A186F96EAA");
             map.put("userId", "297ebe0e55dd69430155de1e99db006e");
 
-
             MediaBean mediaBean = args.getParcelable(SelectMediaActivity.RESULT_MEDIA);
+            Bitmap bitmap = BitmapFactory.decodeFile(mediaBean.getPath());
+            icon.setImageBitmap(bitmap);
 
             File file = new File(mediaBean.getPath());
 

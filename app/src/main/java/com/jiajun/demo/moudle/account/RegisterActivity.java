@@ -21,6 +21,7 @@ import com.jiajun.demo.network.Network;
 import com.jiajun.demo.util.RandomNum;
 import com.jiajun.demo.util.SharedPreferenceUtil;
 import com.jiajun.demo.util.SignatureUtil;
+import com.jiajun.demo.util.ToastUtil;
 import com.jiajun.demo.views.ClearEditText;
 import com.jiajun.demo.views.PassWordEditText;
 import com.orhanobut.logger.Logger;
@@ -96,12 +97,33 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private int index = -2;//选择集团的位置
     private Subscription mSubscription;
 
-    private BaseObserver<List<OrgInfo>> observer = new BaseObserver<List<OrgInfo>>() {
+    private BaseObserver<OrgInfo> observer = new BaseObserver<OrgInfo>() {
 
         @Override
-        public void onSuccess(List<OrgInfo> bean) {
+        public void onSuccess(OrgInfo bean) {
             dismissDialog();
-//            grouds  = (ArrayList<OrgInfo.OrgInfoBean>) bean.getOrgInfo();
+            grouds = (ArrayList<OrgInfo.OrgInfoBean>) bean.getOrgInfo();
+        }
+
+        @Override
+        public void onError(int code, String message, BaseBean baseBean) {
+            dismissDialog();
+            Logger.e("error:" + message);
+        }
+
+        @Override
+        public void networkError(Throwable e) {
+            dismissDialog();
+            Logger.e("service_error");
+        }
+    };
+    private BaseObserver<Object> observer_register = new BaseObserver<Object>() {
+
+        @Override
+        public void onSuccess(Object bean) {
+            dismissDialog();
+            ToastUtil.showToast(getContext(),"注册成功！请登录");
+            finish();
         }
 
         @Override
@@ -187,6 +209,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             // 注册操作
             password1 = pwd.getText().toString();
             password2 = confirmPwd.getText().toString();
+            if (!password1.equals(password2)) {
+                ToastUtil.showToast(this, "2次输入的密码不一致");
+                return;
+            }
             register();
         } else if (v == getVerificationCode) {
             getCode();
@@ -222,7 +248,24 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void register() {
-
+        Map<String, String> map = new HashMap<>();
+        map.put("method", "register");
+        map.put("name", name.getText().toString());
+        map.put("mobile", phone);
+        map.put("pwd", password1);
+        map.put("isRecommend", isRecommend);
+        map.put("checkCode", verificationCode.getText().toString());
+        String str_random = RandomNum.getrandom();
+        map.put("random", str_random);
+        String str_signature = SignatureUtil.getSignature(map);
+        map.put("signature", str_signature);
+        map.put("groudId", groudId);
+        map.put("companyId", companyId);
+        map.put("recommendMobile", recommendNum.getText().toString());
+        mSubscription = Network.RegisterApi().register(map)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(observer_register);
     }
 
     // 获取验证码

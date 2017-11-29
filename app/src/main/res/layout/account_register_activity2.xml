@@ -40,7 +40,7 @@
                     android:padding="10dp"
                     android:text="@string/name"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:id="@+id/name"
@@ -51,7 +51,7 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -70,7 +70,7 @@
                     android:padding="10dp"
                     android:text="@string/idCard"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:id="@+id/idCard"
@@ -82,7 +82,7 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +100,7 @@
                     android:padding="10dp"
                     android:text="@string/phoneNum"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:id="@+id/phoneNum"
@@ -111,7 +111,7 @@
                     android:inputType="phone"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,7 +128,7 @@
                     android:padding="10dp"
                     android:text="@string/verificationCode"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:id="@+id/verification_code"
@@ -141,7 +141,7 @@
                     android:lines="1"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
 
                 <TextView
@@ -153,7 +153,7 @@
                     android:padding="10dp"
                     android:text="@string/register_getcode"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -171,7 +171,7 @@
                     android:padding="10dp"
                     android:text="@string/pwd"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 <com.jiajun.demo.views.PassWordEditText
                     android:id="@+id/pwd"
                     android:layout_width="match_parent"
@@ -182,7 +182,7 @@
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:singleLine="true"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -200,7 +200,7 @@
                     android:padding="10dp"
                     android:text="@string/confirmPwd"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.PassWordEditText
                     android:id="@+id/confirmPwd"
@@ -212,7 +212,7 @@
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:singleLine="true"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -232,7 +232,7 @@
                     android:padding="10dp"
                     android:text="@string/email"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:visibility="gone"
@@ -244,7 +244,7 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <RelativeLayout
@@ -263,7 +263,7 @@
                     android:padding="10dp"
                     android:text="@string/isHasRecommend"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/image_yes"
@@ -284,7 +284,7 @@
                     android:layout_toRightOf="@+id/image_yes"
                     android:text="@string/yes"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/image_no"
@@ -304,7 +304,7 @@
                     android:layout_toRightOf="@+id/image_no"
                     android:text="@string/no"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -323,7 +323,7 @@
                     android:padding="10dp"
                     android:text="@string/recommendNum"
                     android:textColor="@color/text_login_gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <com.jiajun.demo.views.ClearEditText
                     android:id="@+id/recommendNum"
@@ -335,7 +335,7 @@
                     android:inputType="phone"
                     android:maxLines="1"
                     android:padding="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -358,7 +358,7 @@
                         android:padding="10dp"
                         android:text="@string/group"
                         android:textColor="@color/text_login_gray"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/group"
@@ -369,7 +369,7 @@
                         android:drawableRight="@drawable/more_gray"
                         android:padding="10dp"
                         android:textColor="@color/text_login_gray"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -386,7 +386,7 @@
                         android:padding="10dp"
                         android:text="@string/branch"
                         android:textColor="@color/text_login_gray"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/branch"
@@ -397,7 +397,7 @@
                         android:drawableRight="@drawable/more_gray"
                         android:padding="10dp"
                         android:textColor="@color/text_login_gray"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 

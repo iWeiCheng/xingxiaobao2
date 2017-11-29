@@ -348,7 +348,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:drawableLeft="@drawable/tq_arrowbg"
-                    android:text="获取更多补偿/服务,"
+                    android:text="获取更多补偿/服务"
                     android:textColor="@color/text_black"
                     android:textSize="12sp" />
 

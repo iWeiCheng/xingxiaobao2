@@ -21,5 +21,5 @@ import rx.Observable;
 
 public interface GetOrgInfoApi {
     @POST("marke_Interface.jsp")
-    Observable<BaseBean<Object>> getOrgInfo(@QueryMap Map<String, String> map);
+    Observable<BaseBean<OrgInfo>> getOrgInfo(@QueryMap Map<String, String> map);
 }

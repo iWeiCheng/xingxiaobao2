@@ -50,56 +50,57 @@
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="粤" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_car_number"
+                    android:gravity="center"
                     android:padding="10dp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
+                    android:gravity="center"
                     android:padding="10dp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
+                    android:gravity="center"
                     android:padding="10dp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
+                    android:gravity="center"
                     android:padding="10dp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
+                    android:gravity="center"
                     android:padding="10dp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="47dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/select_car_number"
-                    android:padding="10dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="47dp"
-                    android:layout_weight="1"
                     android:gravity="center"
-                    android:background="@drawable/select_car_number"
                     android:padding="10dp" />
 
 
@@ -108,8 +109,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/shape_corner_red"
                     android:gravity="center"
@@ -383,30 +384,77 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_line"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_ovil_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/xb_v2_tel" />
+
+                    <com.jiajun.demo.views.TffTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="400-900-8821"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="中国保险行业协会互联网保险信息披露备案"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="粤ICP备17061786号-1"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="粤ICP备17061786号-1"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="本业务由广东广福宏宇保险经纪有限公司乌鲁木齐分公司提供"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="技术支持由新疆益盛鑫网络科技有限公司提供"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <com.jungly.gridpasswordview.XKeyboardView
-        android:id="@+id/view_keyboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="#d1d5db"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:keyBackground="@drawable/selector_key_background"
-        android:keyPreviewHeight="43dp"
-        android:keyPreviewLayout="@layout/key_preview_layout"
-        android:keyPreviewOffset="-43dp"
-        android:keyTextColor="#333333"
-        android:keyTextSize="16dp"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp"
-        android:shadowColor="#00000000"
-        android:shadowRadius="0.0"
-        android:visibility="gone"
-        app:deleteBackground="@drawable/selector_key_backspace_background"
-        app:deleteDrawable="@drawable/sym_keyboard_delete" />
 
 </FrameLayout>

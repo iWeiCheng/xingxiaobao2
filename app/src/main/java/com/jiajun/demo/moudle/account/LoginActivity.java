@@ -70,10 +70,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         public void onSuccess(LoginBean bean) {
             dismissDialog();
             Logger.e("test:" + bean.getCompanyName());
-            showToast(bean.getUserName());
+//            showToast(bean.getUserName());
             preferences.edit().putString("user_id",bean.getUserId()).apply();
             Intent intent = new Intent(getContext(), MainsActivity.class);
             getContext().startActivity(intent);
+            finish();
         }
 
         @Override

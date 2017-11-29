@@ -64,7 +64,7 @@ public class SplashActivity extends AppCompatActivity  {
                 public void run() {
                    startLoginActivity();
                 }
-            }, 2000);
+            }, 1000);
         }
 //        initContentView();
         SPUtils.put(this, Const.FIRST_OPEN, false);
