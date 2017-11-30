@@ -8,17 +8,18 @@ import java.util.List;
 
 public class HomePageBean {
 
+
     /**
-     * imgList : []
-     * share_title :
-     * share_url :
-     * share_image_url :
-     * share_content : 买保险算佣金简单快捷。更多服务等着您。
-     * insure_car_url : http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp
-     * host_all_url : http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?userIds=
-     * policyMenu : [{"name":"智能报价","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon01.png"},{"name":"人工报价","url":"http://192.168.31.239:8080/agent-new/vip_insure/vip_bill.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon02.png"},{"name":"车险订单","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon03.png"},{"name":"个险订单","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon04.png"},{"name":"工具箱","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon05.png"},{"name":"团队管理","url":"http://192.168.31.239:8080//agent/member_center/my_branch.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon06.png"},{"name":"业绩","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon07.png"},{"name":"钱包","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon08.png"},{"name":" 续费提醒","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon09.png"},{"name":" 知识吧","url":"http://192.168.31.239:8080//agent/member_center/my_branch.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon010.png"},{"name":"微店","url":"http://192.168.31.239:8080/agent-new/order/order_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon011.png"},{"name":"优惠券","url":"http://192.168.31.239:8080//agent-new/coupon/coupon_list.jsp?userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon012.png"}]
-     * hostMenu : [{"title":"费改后车主最高可享3.8折","description":"万元1小时赔付 理赔网点最多","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=101&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_hot01.png","logo":"http://192.168.31.239:8080/agent-new/weixin/images/picc.png"},{"title":"费改后车主最高可享3.8折","description":"万元1小时赔付 理赔网点最多","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_hot02.png","logo":"http://192.168.31.239:8080/agent-new/weixin/images/ans.png"}]
-     * newMenu : [{"title":"新品上市","description":"本月新品","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_tj01.png"},{"title":"意外险","description":"排行榜","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_tj02.png"},{"title":"少儿险","description":"排行榜","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_tj03.png"},{"title":"健康险","description":"排行榜","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_tj04.png"},{"title":"旅游险","description":"排行榜","url":"http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=","imgUrl":"http://192.168.31.239:8080/agent-new/weixin/images/xb_tj04.png"}]
+     * imgList : [{"url":"http://www.163.com","imgUrl":"http://admintest.implus100.com:80/file/manager/20161130160810511.png","desc":"http://admintest.implus100.com:80OK"}]
+     * share_title : 广福E宝
+     * share_url : http://www.implus100.com/agent/interface/app_share.jsp?appShorName=ax
+     * share_image_url : http://www.implus100.com/agent/interface/images/logo_ax.png
+     * share_content : 广福E宝，买保险算佣金简单快捷。更多服务等着您。
+     * insure_car_url : http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp
+     * host_all_url : http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?userIds=297ebe0e55dd69430155de1e99db006e
+     * policyMenu : [{"name":"智能报价","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon01.png"},{"name":"人工报价","url":"http://admintest.implus100.com:80/agent-new/vip_insure/vip_bill.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon02.png"},{"name":"车险订单","url":"http://admintest.implus100.com:80/agent-new/order/order_list.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon03.png"},{"name":"个险订单","url":"http://admintest.implus100.com:80/agent-new/order/order_list.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon04.png"},{"name":"工具箱","url":"","imgUrl":"/agent-new/weixin/images/xb_v2_icon05.png"},{"name":"团队管理","url":"http://admintest.implus100.com:80//agent/member_center/my_branch.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon06.png"},{"name":"业绩","url":"http://admintest.implus100.com:80/agent-new/order/order_list.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon07.png"},{"name":"钱包","url":"http://admintest.implus100.com:80/agent-new/weixin/wallet.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon08.png"},{"name":" 续费提醒","url":"http://admintest.implus100.com:80/agent-new/order/order_list.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon09.png"},{"name":" 知识吧","url":"http://admintest.implus100.com:80//agent/member_center/my_branch.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon010.png"},{"name":"微店","url":"http://admintest.implus100.com:80/agent-new/handle_new/home.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon011.png"},{"name":"优惠券","url":"http://admintest.implus100.com:80//agent-new/coupon/coupon_list.jsp?userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_icon012.png"}]
+     * hostMenu : [{"title":"费改后车主最高可享3.8折","description":"万元1小时赔付  理赔网点最多","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=101&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_hot01.png","logo":"/agent-new/weixin/images/picc.png"},{"title":"费改后车主最高可享3.8折","description":"万元1小时赔付  理赔网点最多","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_v2_hot02.png","logo":"/agent-new/weixin/images/ans.png"}]
+     * newMenu : [{"title":"新品上市","description":"本月新品","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_tj01.png"},{"title":"意外险","description":"排行榜","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_tj02.png"},{"title":"少儿险","description":"排行榜","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_tj03.png"},{"title":"健康险","description":"排行榜","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_tj04.png"},{"title":"旅游险","description":"排行榜","url":"http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e","imgUrl":"/agent-new/weixin/images/xb_tj04.png"}]
      */
 
     private String share_title;
@@ -27,7 +28,7 @@ public class HomePageBean {
     private String share_content;
     private String insure_car_url;
     private String host_all_url;
-    private List<?> imgList;
+    private List<ImgListBean> imgList;
     private List<PolicyMenuBean> policyMenu;
     private List<HostMenuBean> hostMenu;
     private List<NewMenuBean> newMenu;
@@ -80,11 +81,11 @@ public class HomePageBean {
         this.host_all_url = host_all_url;
     }
 
-    public List<?> getImgList() {
+    public List<ImgListBean> getImgList() {
         return imgList;
     }
 
-    public void setImgList(List<?> imgList) {
+    public void setImgList(List<ImgListBean> imgList) {
         this.imgList = imgList;
     }
 
@@ -112,11 +113,53 @@ public class HomePageBean {
         this.newMenu = newMenu;
     }
 
+    public static class ImgListBean {
+        /**
+         * url : http://www.163.com
+         * imgUrl : http://admintest.implus100.com:80/file/manager/20161130160810511.png
+         * desc : http://admintest.implus100.com:80OK
+         */
+
+        private String url;
+        private String imgUrl;
+        private String desc;
+
+        public ImgListBean(String url, String imgUrl, String desc) {
+            this.url = url;
+            this.imgUrl = imgUrl;
+            this.desc = desc;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public String getImgUrl() {
+            return imgUrl;
+        }
+
+        public void setImgUrl(String imgUrl) {
+            this.imgUrl = imgUrl;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+    }
+
     public static class PolicyMenuBean {
         /**
          * name : 智能报价
-         * url : http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?userIds=
-         * imgUrl : http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_icon01.png
+         * url : http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?userIds=297ebe0e55dd69430155de1e99db006e
+         * imgUrl : /agent-new/weixin/images/xb_v2_icon01.png
          */
 
         private String name;
@@ -151,10 +194,10 @@ public class HomePageBean {
     public static class HostMenuBean {
         /**
          * title : 费改后车主最高可享3.8折
-         * description : 万元1小时赔付 理赔网点最多
-         * url : http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=101&userIds=
-         * imgUrl : http://192.168.31.239:8080/agent-new/weixin/images/xb_v2_hot01.png
-         * logo : http://192.168.31.239:8080/agent-new/weixin/images/picc.png
+         * description : 万元1小时赔付  理赔网点最多
+         * url : http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=101&userIds=297ebe0e55dd69430155de1e99db006e
+         * imgUrl : /agent-new/weixin/images/xb_v2_hot01.png
+         * logo : /agent-new/weixin/images/picc.png
          */
 
         private String title;
@@ -208,8 +251,8 @@ public class HomePageBean {
         /**
          * title : 新品上市
          * description : 本月新品
-         * url : http://192.168.31.239:8080/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=
-         * imgUrl : http://192.168.31.239:8080/agent-new/weixin/images/xb_tj01.png
+         * url : http://admintest.implus100.com:80/agent-new/handle_new/insure_page.jsp?product_code=8&userIds=297ebe0e55dd69430155de1e99db006e
+         * imgUrl : /agent-new/weixin/images/xb_tj01.png
          */
 
         private String title;

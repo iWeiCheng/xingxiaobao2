@@ -19,6 +19,6 @@ import rx.Observable;
 
 
 public interface GetPersonalApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<PersonalBean>> getPersonal(@QueryMap Map<String, String> map);
 }

@@ -22,6 +22,6 @@ import rx.Observable;
 
 
 public interface LoginApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<LoginBean>> login(@QueryMap Map<String,String> map);
 }

@@ -19,6 +19,6 @@ import rx.Observable;
 
 
 public interface GetVersionApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<Object>> getVersion(@QueryMap Map<String, String> map);
 }

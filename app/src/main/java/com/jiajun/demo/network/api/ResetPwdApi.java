@@ -19,6 +19,6 @@ import rx.Observable;
 
 
 public interface ResetPwdApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<Object>> resetPwd(@QueryMap Map<String, String> map);
 }

@@ -117,7 +117,7 @@ public class HomepageFragment extends BaseFragment {
     LinearLayout ll_car_number;
 
     private BannerImageAdapter bannerImageAdapter;
-    private List<String> bannerImgs;
+    private List<HomePageBean.ImgListBean> bannerImgs;
     private HomePageBean homePageBean;
 
     private Subscription mSubscription;
@@ -135,29 +135,29 @@ public class HomepageFragment extends BaseFragment {
         return fragment;
     }
 
-    private BaseObserver<GuideImagesBean> observer = new BaseObserver<GuideImagesBean>() {
-
-        @Override
-        public void onSuccess(GuideImagesBean bean) {
-            Logger.e("bean:" + bean.toString());
-            if (bean.getImages().size() > 0) {
-                bannerImgs.clear();
-                for (int i = 0; i < bean.getImages().size(); i++) {
-                    bannerImgs.add(bean.getImages().get(i).getImagePath());
-                }
-            }
-        }
-
-        @Override
-        public void onError(int code, String message, BaseBean baseBean) {
-            Logger.e("error:" + message);
-        }
-
-        @Override
-        public void networkError(Throwable e) {
-            Logger.e(e.getMessage());
-        }
-    };
+    //    private BaseObserver<GuideImagesBean> observer = new BaseObserver<GuideImagesBean>() {
+//
+//        @Override
+//        public void onSuccess(GuideImagesBean bean) {
+//            Logger.e("bean:" + bean.toString());
+//            if (bean.getImages().size() > 0) {
+//                bannerImgs.clear();
+//                for (int i = 0; i < bean.getImages().size(); i++) {
+//                    bannerImgs.add(bean.getImages().get(i).getImagePath());
+//                }
+//            }
+//        }
+//
+//        @Override
+//        public void onError(int code, String message, BaseBean baseBean) {
+//            Logger.e("error:" + message);
+//        }
+//
+//        @Override
+//        public void networkError(Throwable e) {
+//            Logger.e(e.getMessage());
+//        }
+//    };
     private BaseObserver<HomePageBean> observer_homepage = new BaseObserver<HomePageBean>() {
 
         @Override
@@ -177,10 +177,17 @@ public class HomepageFragment extends BaseFragment {
             hotAdapter = new HotAdapter(bean.getHostMenu());
             recyclerHot.setAdapter(hotAdapter);
             setNewData(bean.getNewMenu());
+
+            if (bean.getImgList().size() > 0) {
+                bannerImgs.clear();
+                bannerImgs = bean.getImgList();
+            }
+            bannerImageAdapter.notifyDataSetChanged();
             preferences.edit().putString("share_title", bean.getShare_title()).apply();
             preferences.edit().putString("share_url", bean.getShare_url()).apply();
             preferences.edit().putString("share_image_url", bean.getShare_image_url()).apply();
             preferences.edit().putString("share_content", bean.getShare_content()).apply();
+
         }
 
         @Override
@@ -202,9 +209,9 @@ public class HomepageFragment extends BaseFragment {
                     tvProduct1.setText(bean.getTitle());
                     tvProduct1Desc.setText(bean.getDescription());
                     Glide.with(getContext())
-                            .load(Network.SERVICE+bean.getImgUrl())
+                            .load(Network.SERVICE + bean.getImgUrl())
                             .apply(new RequestOptions().placeholder(R.drawable.lei01).error(R.drawable.lei01))
-                    .into(ivProduct1);
+                            .into(ivProduct1);
                     rlProduct1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -217,7 +224,7 @@ public class HomepageFragment extends BaseFragment {
                 case 1:
                     tvProduct2.setText(bean.getTitle());
                     tvProduct2Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                    Glide.with(getContext()).load(Network.SERVICE + bean.getImgUrl())
                             .apply(new RequestOptions().placeholder(R.drawable.lei02).error(R.drawable.lei02))
                             .into(ivProduct2);
                     rlProduct2.setOnClickListener(new View.OnClickListener() {
@@ -232,7 +239,7 @@ public class HomepageFragment extends BaseFragment {
                 case 2:
                     tvProduct3.setText(bean.getTitle());
                     tvProduct3Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                    Glide.with(getContext()).load(Network.SERVICE + bean.getImgUrl())
                             .apply(new RequestOptions().placeholder(R.drawable.lei03).error(R.drawable.lei03))
 
                             .into(ivProduct3);
@@ -248,7 +255,7 @@ public class HomepageFragment extends BaseFragment {
                 case 3:
                     tvProduct4.setText(bean.getTitle());
                     tvProduct4Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                    Glide.with(getContext()).load(Network.SERVICE + bean.getImgUrl())
                             .apply(new RequestOptions().placeholder(R.drawable.lei04).error(R.drawable.lei04))
                             .into(ivProduct4);
                     rlProduct4.setOnClickListener(new View.OnClickListener() {
@@ -263,7 +270,7 @@ public class HomepageFragment extends BaseFragment {
                 case 4:
                     tvProduct5.setText(bean.getTitle());
                     tvProduct5Desc.setText(bean.getDescription());
-                    Glide.with(getContext()).load(Network.SERVICE+bean.getImgUrl())
+                    Glide.with(getContext()).load(Network.SERVICE + bean.getImgUrl())
                             .apply(new RequestOptions().placeholder(R.drawable.lei05).error(R.drawable.lei05))
                             .into(ivProduct5);
                     rlProduct5.setOnClickListener(new View.OnClickListener() {
@@ -287,7 +294,6 @@ public class HomepageFragment extends BaseFragment {
 
     @Override
     public void initView() {
-//        testPlateNumberInput();
         initCarNumber();
         userId = preferences.getString("user_id", "");
         GridLayoutManager manager = new GridLayoutManager(getContext(), 4);
@@ -306,13 +312,14 @@ public class HomepageFragment extends BaseFragment {
         looperPageRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(),
                 LinearLayoutManager.HORIZONTAL, false));
         bannerImgs = new ArrayList<>();
-        bannerImgs.add(R.drawable.banner01 + "");
+        bannerImgs.add(new HomePageBean.ImgListBean("", R.drawable.banner01 + "", ""));
         bannerImageAdapter = new BannerImageAdapter(bannerImgs);
         looperPageRecyclerView.setAdapter(bannerImageAdapter);
         indicator.setupWithRecyclerView(looperPageRecyclerView);
 
+
         unsubscribe();
-        getGuideImages();
+//        getGuideImages();
         getHomePageInfo();
     }
 
@@ -365,21 +372,21 @@ public class HomepageFragment extends BaseFragment {
                 .subscribe(observer_homepage);
     }
 
-    private void getGuideImages() {
-        Map<String, String> map = new HashMap<>();
-        map.put("method", "getGuideImages");
-        map.put("type", "1");
-        map.put("versionName", getResources().getString(R.string.versionName));
-        String str_random = RandomNum.getrandom();
-        map.put("random", str_random);
-        String str_signature = SignatureUtil.getSignature(map);
-        map.put("signature", str_signature);
-
-        mSubscription = Network.getGuideImages().getGuideImages(map)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(observer);
-    }
+//    private void getGuideImages() {
+//        Map<String, String> map = new HashMap<>();
+//        map.put("method", "getGuideImages");
+//        map.put("type", "1");
+//        map.put("versionName", getResources().getString(R.string.versionName));
+//        String str_random = RandomNum.getrandom();
+//        map.put("random", str_random);
+//        String str_signature = SignatureUtil.getSignature(map);
+//        map.put("signature", str_signature);
+//
+//        mSubscription = Network.getGuideImages().getGuideImages(map)
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(observer);
+//    }
 
     private void unsubscribe() {
         if (mSubscription != null && !mSubscription.isUnsubscribed()) {
@@ -401,6 +408,7 @@ public class HomepageFragment extends BaseFragment {
     @OnClick({R.id.tv_car_insurance, R.id.ll_more_hot})
     public void onViewClicked(View view) {
         Intent intent = new Intent(getContext(), WebViewActivity.class);
+        String url = "";
         switch (view.getId()) {
             case R.id.tv_car_insurance://车险报价
                 if (homePageBean == null) {
@@ -411,11 +419,16 @@ public class HomepageFragment extends BaseFragment {
                     TextView textView = (TextView) ll_car_number.getChildAt(i);
                     sb.append(textView.getText());
                 }
-                intent.putExtra("url", homePageBean.getInsure_car_url() + "&car_number=" + sb.toString());
+                url = homePageBean.getInsure_car_url() + "&car_number=" + sb.toString();
                 break;
             case R.id.ll_more_hot://更多热销
-                intent.putExtra("url", homePageBean.getHost_all_url());
+                url = homePageBean.getHost_all_url();
                 break;
         }
+        if (url == null || url.length() == 0) {
+            return;
+        }
+        intent.putExtra("url", url);
+        startActivity(intent);
     }
 }

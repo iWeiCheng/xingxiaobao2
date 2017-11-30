@@ -20,6 +20,6 @@ import rx.Observable;
 
 
 public interface CustomerApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<List<CustomerBean>>> getCustomer(@QueryMap Map<String, String> map);
 }

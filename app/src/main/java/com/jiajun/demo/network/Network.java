@@ -12,14 +12,11 @@ import com.jiajun.demo.network.api.GetPersonalApi;
 import com.jiajun.demo.network.api.GetVersionApi;
 import com.jiajun.demo.network.api.HomePageApi;
 import com.jiajun.demo.network.api.LoginApi;
-import com.jiajun.demo.network.api.NewsApi;
 import com.jiajun.demo.network.api.PrivilegeApi;
 import com.jiajun.demo.network.api.RegisterApi;
 import com.jiajun.demo.network.api.ResetPwdApi;
-import com.jiajun.demo.network.api.TestApi;
 import com.jiajun.demo.network.api.UploadHeadImgApi;
 import com.jiajun.demo.network.api.UserInfoApi;
-import com.jiajun.demo.network.api.WechatApi;
 import com.jiajun.demo.util.IMSI;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.cookie.CookieJarImpl;
@@ -49,9 +46,6 @@ public class Network {
 
     public static final String ROOT_URL = "http://v.juhe.cn/";
 
-    private static TestApi testApi;
-    private static NewsApi sNewsApi;
-    private static WechatApi mWechatApi;
 
     private static GetVersionApi getVersionApi;
     private static GetOrgInfoApi getOrgInfoApi;
@@ -74,6 +68,7 @@ public class Network {
     private static CallAdapter.Factory rxJavaCallAdapterFactory = RxJavaCallAdapterFactory.create();
 
     public static String KEY = "20171025#$@";
+    public static String URL = "marke_Interfaces.jsp";
     public static String BASE_URL = "http://admintest.implus100.com/agent/interface/";
     public static String SERVICE = "http://admintest.implus100.com";
 //    public static String BASE_URL = "http://192.168.31.98:8080/agent/interface/";
@@ -113,33 +108,6 @@ public class Network {
                 .build();
     }
 
-    public static NewsApi getNewsApi() {
-        if (sNewsApi == null) {
-            Retrofit retrofit = new Retrofit.Builder()
-                    .client(okHttpClient)
-                    .baseUrl(ROOT_URL)
-                    .addConverterFactory(gsonConverterFactory)
-                    .addCallAdapterFactory(rxJavaCallAdapterFactory)
-                    .build();
-            sNewsApi = retrofit.create(NewsApi.class);
-        }
-        Log.e("oooooo", "getNewsApi");
-        return sNewsApi;
-    }
-
-    public static WechatApi getWechatApi() {
-        if (mWechatApi == null) {
-            Retrofit retrofit = new Retrofit.Builder()
-                    .client(okHttpClient)
-                    .baseUrl(ROOT_URL)
-                    .addConverterFactory(gsonConverterFactory)
-                    .addCallAdapterFactory(rxJavaCallAdapterFactory)
-                    .build();
-            mWechatApi = retrofit.create(WechatApi.class);
-        }
-        Log.e("oooooo", "getwechatApi");
-        return mWechatApi;
-    }
 
     /**
      * 获取版本号

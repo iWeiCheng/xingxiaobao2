@@ -19,6 +19,6 @@ import rx.Observable;
 
 
 public interface GetCodeApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<Object>> getCode(@QueryMap Map<String, String> map);
 }

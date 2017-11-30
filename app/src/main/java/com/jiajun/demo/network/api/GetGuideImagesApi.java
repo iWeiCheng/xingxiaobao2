@@ -20,6 +20,6 @@ import rx.Observable;
 
 
 public interface GetGuideImagesApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<GuideImagesBean>> getGuideImages(@QueryMap Map<String, String> map);
 }

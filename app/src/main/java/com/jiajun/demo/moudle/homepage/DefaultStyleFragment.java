@@ -257,11 +257,11 @@ public class DefaultStyleFragment extends BaseFragment implements SwipeRefreshLa
      */
     private void requestNews(/*String key*/) {
         unsubscribe();
-        mSubscription = Network.getNewsApi()
-                .getNews(mParam1, JUHE_NEWS_APP_KEY)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(mObserver);
+//        mSubscription = Network.getNewsApi()
+//                .getNews(mParam1, JUHE_NEWS_APP_KEY)
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(mObserver);
     }
 
     private void unsubscribe() {

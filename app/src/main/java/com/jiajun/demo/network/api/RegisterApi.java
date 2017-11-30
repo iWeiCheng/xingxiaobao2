@@ -18,6 +18,6 @@ import rx.Observable;
 
 
 public interface RegisterApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<Object>> register(@QueryMap Map<String, String> map);
 }

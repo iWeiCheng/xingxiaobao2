@@ -20,6 +20,6 @@ import rx.Observable;
 
 
 public interface HomePageApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<HomePageBean>> getHomePage(@QueryMap Map<String, String> map);
 }

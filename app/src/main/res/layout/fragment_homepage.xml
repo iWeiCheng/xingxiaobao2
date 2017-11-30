@@ -372,6 +372,7 @@
                 android:background="@color/bg_line" />
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="65dp"
                 android:layout_height="16dp"
                 android:layout_marginBottom="12dp"
@@ -380,6 +381,7 @@
                 android:src="@drawable/bt2" />
 
             <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/recycler_guess"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

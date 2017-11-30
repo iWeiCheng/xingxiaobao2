@@ -20,6 +20,6 @@ import rx.Observable;
 
 
 public interface PrivilegeApi {
-    @POST("marke_Interface.jsp")
+    @POST("marke_Interfaces.jsp")
     Observable<BaseBean<PrivilegeBean>> getVipPrivilege(@QueryMap Map<String, String> map);
 }
